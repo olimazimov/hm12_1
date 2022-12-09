@@ -1,0 +1,39 @@
+#- hosts: all
+#  tasks:
+#    - name: Print message
+#      debug:
+#        msg: Hello Ansible World
+
+
+
+#- hosts: all
+#  gather_facts: False
+#  connection: local
+#
+# tasks:
+#
+#    - name: ping
+#      shell: ping -c 1 -w 2 8.8.8.8
+#      ignore_errors: true
+
+
+- hosts: all
+  tasks:
+   - name: "Ping computers"
+     shell:
+       cmd: "ping -c1 -w 2 {{ pinging_host }}"
+     register: pingged_host
+     ignore_errors: yes
+     with_items:
+       - 1.1.1.1
+       - 8.8.8.8
+     loop_control:
+       loop_var: pinging_host
+
+   - name: "Result ping"
+     debug:
+       var: pingged_host
+
+#   - name: "ip ping"
+#     debug:
+#       var: pingged_host.results.value.pinging_host
