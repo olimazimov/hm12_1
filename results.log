@@ -1,0 +1,217 @@
+# result of following cmd: 
+ansible-playbook -i hosts.ini playbook.yml
+
+[WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+PLAY [all] ****************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ****************************************************************************************************************************************************************************
+ok: [192.168.137.30]
+ok: [192.168.137.20]
+
+TASK [find all files that are older than 1d] ******************************************************************************************************************************************************
+ok: [192.168.137.20]
+ok: [192.168.137.30]
+
+TASK [print files to be removed] ******************************************************************************************************************************************************************
+ok: [192.168.137.20] => {
+    "FilesToClean": {
+        "changed": false,
+        "examined": 4,
+        "failed": false,
+        "files": [
+            {
+                "atime": 1670146889.2733932,
+                "ctime": 1671010889.2698188,
+                "dev": 64768,
+                "gid": 0,
+                "gr_name": "root",
+                "inode": 1967348,
+                "isblk": false,
+                "ischr": false,
+                "isdir": false,
+                "isfifo": false,
+                "isgid": false,
+                "islnk": false,
+                "isreg": true,
+                "issock": false,
+                "isuid": false,
+                "mode": "0644",
+                "mtime": 1670146889.2733932,
+                "nlink": 1,
+                "path": "/var/log/nginx/3.log",
+                "pw_name": "root",
+                "rgrp": true,
+                "roth": true,
+                "rusr": true,
+                "size": 0,
+                "uid": 0,
+                "wgrp": false,
+                "woth": false,
+                "wusr": true,
+                "xgrp": false,
+                "xoth": false,
+                "xusr": false
+            },
+            {
+                "atime": 1670146889.2733932,
+                "ctime": 1671010889.2698188,
+                "dev": 64768,
+                "gid": 0,
+                "gr_name": "root",
+                "inode": 1966866,
+                "isblk": false,
+                "ischr": false,
+                "isdir": false,
+                "isfifo": false,
+                "isgid": false,
+                "islnk": false,
+                "isreg": true,
+                "issock": false,
+                "isuid": false,
+                "mode": "0644",
+                "mtime": 1670146889.2733932,
+                "nlink": 1,
+                "path": "/var/log/nginx/1.log",
+                "pw_name": "root",
+                "rgrp": true,
+                "roth": true,
+                "rusr": true,
+                "size": 0,
+                "uid": 0,
+                "wgrp": false,
+                "woth": false,
+                "wusr": true,
+                "xgrp": false,
+                "xoth": false,
+                "xusr": false
+            },
+            {
+                "atime": 1670146889.2733932,
+                "ctime": 1671010889.2698188,
+                "dev": 64768,
+                "gid": 0,
+                "gr_name": "root",
+                "inode": 1967073,
+                "isblk": false,
+                "ischr": false,
+                "isdir": false,
+                "isfifo": false,
+                "isgid": false,
+                "islnk": false,
+                "isreg": true,
+                "issock": false,
+                "isuid": false,
+                "mode": "0644",
+                "mtime": 1670146889.2733932,
+                "nlink": 1,
+                "path": "/var/log/nginx/2.log",
+                "pw_name": "root",
+                "rgrp": true,
+                "roth": true,
+                "rusr": true,
+                "size": 0,
+                "uid": 0,
+                "wgrp": false,
+                "woth": false,
+                "wusr": true,
+                "xgrp": false,
+                "xoth": false,
+                "xusr": false
+            }
+        ],
+        "matched": 3,
+        "msg": "All paths examined",
+        "skipped_paths": {}
+    }
+}
+ok: [192.168.137.30] => {
+    "FilesToClean": {
+        "changed": false,
+        "examined": 3,
+        "failed": false,
+        "files": [
+            {
+                "atime": 1670146925.5835168,
+                "ctime": 1671010925.5795653,
+                "dev": 64768,
+                "gid": 0,
+                "gr_name": "root",
+                "inode": 1972897,
+                "isblk": false,
+                "ischr": false,
+                "isdir": false,
+                "isfifo": false,
+                "isgid": false,
+                "islnk": false,
+                "isreg": true,
+                "issock": false,
+                "isuid": false,
+                "mode": "0644",
+                "mtime": 1670146925.5835168,
+                "nlink": 1,
+                "path": "/var/log/nginx/error.log",
+                "pw_name": "root",
+                "rgrp": true,
+                "roth": true,
+                "rusr": true,
+                "size": 0,
+                "uid": 0,
+                "wgrp": false,
+                "woth": false,
+                "wusr": true,
+                "xgrp": false,
+                "xoth": false,
+                "xusr": false
+            },
+            {
+                "atime": 1670146925.5835168,
+                "ctime": 1671010925.5795653,
+                "dev": 64768,
+                "gid": 0,
+                "gr_name": "root",
+                "inode": 1966609,
+                "isblk": false,
+                "ischr": false,
+                "isdir": false,
+                "isfifo": false,
+                "isgid": false,
+                "islnk": false,
+                "isreg": true,
+                "issock": false,
+                "isuid": false,
+                "mode": "0644",
+                "mtime": 1670146925.5835168,
+                "nlink": 1,
+                "path": "/var/log/nginx/access.log",
+                "pw_name": "root",
+                "rgrp": true,
+                "roth": true,
+                "rusr": true,
+                "size": 0,
+                "uid": 0,
+                "wgrp": false,
+                "woth": false,
+                "wusr": true,
+                "xgrp": false,
+                "xoth": false,
+                "xusr": false
+            }
+        ],
+        "matched": 2,
+        "msg": "All paths examined",
+        "skipped_paths": {}
+    }
+}
+
+TASK [remove registered files] ********************************************************************************************************************************************************************
+changed: [192.168.137.30] => (item={'path': '/var/log/nginx/error.log', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 0, 'inode': 1972897, 'dev': 64768, 'nlink': 1, 'atime': 1670146925.5835168, 'mtime': 1670146925.5835168, 'ctime': 1671010925.5795653, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+changed: [192.168.137.20] => (item={'path': '/var/log/nginx/3.log', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 0, 'inode': 1967348, 'dev': 64768, 'nlink': 1, 'atime': 1670146889.2733932, 'mtime': 1670146889.2733932, 'ctime': 1671010889.2698188, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+changed: [192.168.137.30] => (item={'path': '/var/log/nginx/access.log', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 0, 'inode': 1966609, 'dev': 64768, 'nlink': 1, 'atime': 1670146925.5835168, 'mtime': 1670146925.5835168, 'ctime': 1671010925.5795653, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+changed: [192.168.137.20] => (item={'path': '/var/log/nginx/1.log', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 0, 'inode': 1966866, 'dev': 64768, 'nlink': 1, 'atime': 1670146889.2733932, 'mtime': 1670146889.2733932, 'ctime': 1671010889.2698188, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+changed: [192.168.137.20] => (item={'path': '/var/log/nginx/2.log', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 0, 'inode': 1967073, 'dev': 64768, 'nlink': 1, 'atime': 1670146889.2733932, 'mtime': 1670146889.2733932, 'ctime': 1671010889.2698188, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+
+PLAY RECAP ****************************************************************************************************************************************************************************************
+192.168.137.20             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+192.168.137.30             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+

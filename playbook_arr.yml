@@ -3,15 +3,18 @@
 
   vars:
    age: 1d
-   paths: /var/log/nginx
+   paths: 
+    - /var/log/nginx
+    - /var/log/postgresql
 
   tasks:
     - name: find all files that are older than {{ age }}
       ansible.builtin.find:
-        path: '{{ paths }}'
+        path: '{{ item }}'
         age: '{{ age }}'
         recurse: yes
 #        patterns: '*.log'
+      with_items: "{{ paths }}"
       register: FilesToClean
 
     - name: print files to be removed
@@ -23,5 +26,16 @@
         path: "{{ item.path }}"
         state: absent
       with_items: "{{ FilesToClean.files }}"
+      register: files2
 
 
+#    - name: print files2
+#      debug:
+#        var: files2
+
+
+#    - name: remove
+#      file:
+#       path: "{{ item.path }}"
+#       state: absent
+#      with_items: "{{ files2.item }}"
