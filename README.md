@@ -1,13 +1,13 @@
 # hm12_1
 
-Created two playbooks to clean logs on servers. 
+Created two playbooks to clean logs on servers.
 
-#1. Cleans only one folder, mentioned on variable var
-Results are stored in results.log
+<h1>1. Cleans only one folder, mentioned on variable `var`</h1>
+Results are stored in `results.log`
 
 
 
-#2. Cleans several folders, mentioned on array var
+<h1>2. Cleans several folders, mentioned on array `var`.</h1>
 Currently working on it... Getting following error:
 
 TASK [remove registered files] ********************************************************************************************************************************************************************
