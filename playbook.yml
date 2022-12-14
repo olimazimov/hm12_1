@@ -7,7 +7,7 @@
 
   tasks:
     - name: find all files that are older than {{ age }}
-      ansible.builtin.find:
+      find:
         path: '{{ paths }}'
         age: '{{ age }}'
         recurse: yes
