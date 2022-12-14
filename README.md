@@ -7,7 +7,7 @@ Results are stored in `results.log`
 
 <br><br><br><br>
 
-As an upgrade working on cleaning several folders, mentioned on array `var`.</h2>
+As an upgrade working on cleaning several folders, mentioned on array `var` [playbook_arr.yml].</h2>
 For now getting a following error:
 
 TASK [remove registered files] ********************************************************************************************************************************************************************
